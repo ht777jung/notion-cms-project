@@ -1,0 +1,21 @@
+import { cn } from "@/lib/utils";
+
+// 반응형 최대 너비 + 패딩 컨테이너
+export function Container({
+  children,
+  className,
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) {
+  return (
+    <div
+      className={cn(
+        "mx-auto w-full max-w-7xl px-4 sm:px-6 md:px-8",
+        className
+      )}
+    >
+      {children}
+    </div>
+  );
+}
